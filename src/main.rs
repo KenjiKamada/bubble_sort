@@ -9,29 +9,9 @@ fn main() {
     for n in 1..x.len(){
         x[n] = rand::thread_rng().gen_range(-(1000+1), 1000+1);
     }
-    bubble_sort(&mut x, &mut y);
-    
-    //let mut tmp: [i32;2]=[0;2];
-  //  let mut tmp = [0,0];
-   
-    // バブルソート
-    // for n in 1.. x.len(){
-    //     for m in 2.. x.len(){
-    //         tmp[0]=x[m-1];  tmp[1]=x[m];
-    //                if x[m] < x[m-1]{
-    //             x[m-1] = tmp[1];
-    //             x[m] = tmp[0];
-    //         }
-    //     } 
-    // }
-
  
-
-     // copy x -> y
-    // for n in 0.. y.len(){
-    //     y[n] = x[n+1];
-    //   }
-
+       bubble_sort(&mut x, &mut y); // xからyにソートする関数 
+ 
     // 確認  yにソート結果
     // 全部"True！"なら良い。
     for n in 0.. y.len()-1{
@@ -45,6 +25,7 @@ fn main() {
     }
 
 }
+// xからyにソートする関数
 fn bubble_sort(x: &mut [i32], y: &mut [i32]){
 
   //  println!("x={}",x[10]);
@@ -54,7 +35,7 @@ fn bubble_sort(x: &mut [i32], y: &mut [i32]){
     for n in 1.. x.len(){
         for m in 2.. x.len(){
             tmp[0]=x[m-1];  tmp[1]=x[m];
-                   if x[m] < x[m-1]{
+            if x[m] < x[m-1]{
                 x[m-1] = tmp[1];
                 x[m] = tmp[0];
             }
@@ -66,6 +47,3 @@ fn bubble_sort(x: &mut [i32], y: &mut [i32]){
     y[n] = x[n+1];
     }
 }
-
-
-
