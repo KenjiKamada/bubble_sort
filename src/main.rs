@@ -2,7 +2,7 @@ use rand::Rng;
 
 fn main() {
 
-    let mut x: [i32; 101]=[0;101]; //乱数
+    let mut x: [i32; 100]=[0;100]; //乱数
     let mut y: [i32; 100]=[0;100]; // ソート結果
 
     // -1000 以上 1000 以下のランダムな整数を100個用意する。
@@ -26,10 +26,15 @@ fn main() {
 
 }
 // xからyにソートする関数
-fn bubble_sort(x: &mut [i32], y: &mut [i32]){
+fn bubble_sort(x_in: &mut [i32], y: &mut [i32]){
 
   //  println!("x={}",x[10]);
   let mut tmp = [0,0];
+  let x:[i32; x_in.len()+1] =[0;x_in.len()];
+  
+  for n in x_in.len(){
+      
+  }
 
     // バブルソート
     for n in 1.. x.len(){
