@@ -2,7 +2,7 @@ use rand::Rng;
 
 fn main() {
 
-    const N:usize = 1000; //N個の整数数列
+    const N:usize = 100; //N個の整数数列
 
     let mut x: [i32; N]=[0;N]; //乱数
     let mut y: [i32; N]=[0;N]; // ソート結果
