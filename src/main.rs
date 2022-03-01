@@ -9,7 +9,7 @@ fn main() {
 
     // -1000 以上 1000 以下のランダムな整数を100個用意する。
     for n in 1..x.len(){
-        x[n] = rand::thread_rng().gen_range(-(1000+1), 1000+1);
+        x[n] = rand::thread_rng().gen_range(-1000, 1000+1);
     }
  
        bubble_sort(&mut x, &mut y); // xからyにソートする関数 
