@@ -22,31 +22,25 @@ fn main() {
     }
 }
 /*  xからyにソートする関数 */
-fn bubble_sort(x_in: &mut [i32], y: &mut [i32]){
+fn bubble_sort(x: &mut [i32], y: &mut [i32]){
 
   //  println!("x={}",x[10]);
   let mut tmp = [0,0];
-  let mut x:Vec<i32>= Vec::new(); 
-  
-  // x_in.len()+1 個のバッファー確保
-  x.push(0); // ダミー
-  for n in 0..x_in.len(){
-      x.push(x_in[n]);
-  }
-
-    // バブルソート
-    for n in 1.. x.len(){
-        for m in 2.. x.len(){
-            tmp[0]=x[m-1];  tmp[1]=x[m];
-            if x[m] < x[m-1]{
-                x[m-1] = tmp[1];
-                x[m] = tmp[0];
-            }
-        } 
-    }
 
     // copy x -> y
     for n in 0.. y.len(){
-    y[n] = x[n+1];
+        y[n] = x[n];
+    }
+
+    // バブルソート
+    for n in 0.. x.len()-2{
+        for m in 1.. x.len(){
+            tmp[0]=y[m-1];  
+            tmp[1]=y[m];
+            if y[m] < y[m-1]{
+                y[m-1] = tmp[1];
+                y[m] = tmp[0];
+            }
+        } 
     }
 }
