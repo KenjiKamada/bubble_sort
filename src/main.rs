@@ -17,9 +17,7 @@ fn main() {
     // 確認  yにソート結果
     // 全部"True！"なら良い。
     for n in 0.. y.len()-1{
-
         println!("sort前={}, sort結果={}", x[n], y[n]);
-
         assert!(y[n] <= y[n+1]);
     }
 }
