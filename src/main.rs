@@ -33,7 +33,7 @@ fn bubble_sort(x: &mut [i32], y: &mut [i32]){
     }
 
     // バブルソート
-    for n in 0.. x.len()-2{
+    for _n in 0.. x.len()-2{
         for m in 1.. x.len(){
             tmp[0]=y[m-1];  
             tmp[1]=y[m];
